@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="column" wx:for="{{2}}" wx:key="*this" data-index="{{index}}">
+    <view wx:for="{{itemsInColumns[index]}}" wx:key="_id" class="item">
+      <image class="item-image" src="{{item.image}}" mode="widthFix" bindtap="goToDetail" data-describe="{{item.describe}}"data-id="{{item._id}}" data-name="{{item.name}}" data-image="{{item.image}}"data-_openid="{{item._openid}}"></image>
+      <view class="item-name">{{item.name}}</view>
+    </view>
+  </view>
+</view>

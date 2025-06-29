@@ -1,0 +1,32 @@
+/* pages/add/add.wxss */
+.container {
+  padding: 40rpx; 
+}
+
+input {
+  margin-bottom: 20rpx; 
+  padding: 20rpx; 
+  border: 2rpx solid #ddd; 
+  border-radius: 10rpx; 
+}
+
+image {
+  margin-top: 20rpx; 
+  width: 100%; 
+  height: 600rpx; 
+}
+
+.submit-button {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 702rpx; 
+  height: 88rpx; 
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 44rpx; 
+  text-align: center;
+  line-height: 65rpx; 
+}

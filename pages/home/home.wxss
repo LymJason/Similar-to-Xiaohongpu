@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.column {
+  width: 48%; 
+}
+
+.item {
+  margin-bottom: 20rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.item-image {
+  width: 100%;
+  border-radius: 16rpx 16rpx 0 0;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+.item-name {
+  font-size: 36rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  background-color: rgba(248, 248, 248, 0.8);
+  border-radius: 0 0 16rpx 16rpx;
+}

@@ -1,0 +1,10 @@
+<view class="Title">历史{{type}}</view>
+<view class="panel-list-item" wx:for="{{partItemList}}" wx:key="_id" 
+  data-id="{{item._id}}"
+  data-name="{{item.name}}"
+  data-image="{{item.image}}"
+  bindtap="onPartItemTap"
+  bindlongpress="onPartItemLongPress">
+  <image class="partItemImage" src="{{item.image?item.image:'cloud://lin-0gefnnv9220dd9dc.6c69-lin-0gefnnv9220dd9dc-1329002260/images/add-picture.png'}}"></image>
+  <text class="partItemName">{{item.name}}</text>
+</view>

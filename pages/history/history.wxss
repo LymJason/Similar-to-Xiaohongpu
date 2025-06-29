@@ -1,0 +1,31 @@
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.Title text {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.panel-list-item {
+  display: flex;
+  flex-direction: row; 
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.partItemImage {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.partItemName {
+  font-size: 28rpx;
+  margin-top: 10rpx; /* 文字和图片之间的间隔 */
+}

@@ -1,0 +1,22 @@
+<!-- pages/add/add.wxml -->
+<view class="container">
+  <form bindsubmit="onFormSubmit">
+    <!-- 添加评分的标题 -->
+    <view class="part">
+      <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" />
+      <image wx:if="{{!imagePath}}" src="/images/add.png" mode="aspectFit" bindtap="chooseMedia" />
+      <input name="partItemName" placeholder="请输入评分标题" value="{{partItemName}}" />
+    </view>
+    
+    <!-- 添加评分的对象 -->
+    <view class="part_item">
+      <button bindtap="showAddRatingObject" wx:if="{{!showRatingObjectForm}}">立即添加评分对象</button>
+      <view wx:if="{{showRatingObjectForm}}">
+        <image wx:if="{{ratingObjectImagePath}}" src="{{ratingObjectImagePath}}" mode="aspectFit" />
+        <input name="ratingObjectName" placeholder="请输入对象名称" value="{{ratingObjectName}}" />
+      </view>
+    </view>
+    
+    <button type="primary" form-type="submit">提交</button>
+  </form>
+</view>

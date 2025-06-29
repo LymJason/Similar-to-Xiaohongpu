@@ -1,0 +1,49 @@
+<block wx:if="{{!nickName}}">
+  <!-- 登录区域 -->
+  <view class="container">
+    <button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button> 
+
+  <form bindsubmit="formSubmit">
+    <view class="form-item">
+      <view class='text'>昵称：</view>
+      <input type="nickname" class="input" name="nickname" placeholder="请输入昵称" />
+    </view>
+    <button type="primary" style="margin-top: 40rpx;margin-bottom: 20rpx;" form-type="submit">登录</button>
+  </form>
+</view>
+</block>
+
+<block wx:else>
+
+  <!-- 头像昵称区域 -->
+  <view class="top-box">
+    <image src="{{avatarUrl}}" class="avatar"></image>
+    <view class="nickname">{{nickName}}</view>
+  </view>
+
+  <!-- 面板区域 -->
+  <view class="panel">
+    <view class="panel-list-item" bindtap="history_rating">
+      <text>历史打分</text>
+      <image src="/images/history.png"></image>
+    </view>
+
+    <view class="panel-list-item" bindtap="history_comment">
+      <text>历史评价</text>
+      <image src="/images/comment.png"></image>
+    </view>
+
+    <view class="panel-list-item" bindtap="history_blog">
+      <text>历史发布</text>
+      <image src="/images/history-query.png"></image>
+    </view>
+
+    <view class="panel-list-item" bindtap="logout">
+      <text>退出登录</text>
+      <image src="/images/logout.png"></image>
+    </view>
+  </view>
+
+</block>

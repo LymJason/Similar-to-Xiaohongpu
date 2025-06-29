@@ -1,0 +1,155 @@
+.title-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.scroll-container {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.poppart-item {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.poppart-item:hover,
+.poppart-item:active {
+  transform: translateY(-5px);
+}
+
+.poppart-name {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  background-color: #007aff;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.poppart-image {
+  width: 100%;
+  border-radius: 4px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.poppart-image:hover {
+  opacity: 0.8;
+}
+
+.part-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.part-item-name {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.part-item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.part-item-image:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.part-item:active .part-item-image {
+  opacity: 0.9;
+}
+
+.part-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.part-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px; 
+  background-color: #f8f8f8; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.part-list text {
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #333;
+  margin-bottom: 15px; 
+  text-align: center;
+}
+
+.part-item {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px 0; 
+  border-bottom: 1px solid #eaeaea;
+}
+
+.part-button {
+  flex: 1; 
+  margin: 0 10px; 
+  padding: 8px 16px;
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.part-button:hover {
+  background-color: #0056b3; 
+}
+
+.part-item:last-child {
+  border-bottom: none;
+}
+
+.part-item[data-selected="true"] .part-button {
+  background-color: #0056b3;
+}

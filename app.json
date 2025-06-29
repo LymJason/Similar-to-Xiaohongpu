@@ -1,0 +1,63 @@
+{ 
+  "cloud": true,
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/addblog/addblog",
+    "pages/index/index",
+    "pages/part/part",
+    "pages/detail/detail",
+    "pages/add/add",
+    "pages/history/history",
+    "pages/addRatingObject/addRatingObject",
+    "pages/blogdetail/blogdetail",
+    "pages/historyblog/historyblog"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "狠狠地避雷",
+    "navigationBarTitleTextSize": "600px", 
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "selectedColor": "#1290db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/addblog/addblog",
+        "text": "发布",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "专区",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "个人中心",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "authorizeList": [
+    "scope.userInfo", 
+    "scope.userLocation" 
+  ]
+}

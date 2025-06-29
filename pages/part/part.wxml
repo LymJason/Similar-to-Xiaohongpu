@@ -1,0 +1,27 @@
+<view class="container">
+  <view 
+    class="partItem" 
+    wx:for="{{partItemList}}" 
+    wx:key="_id" 
+    data-id="{{item._id}}" 
+    data-name="{{item.name}}"
+    data-rating="{{item.rating}}"
+    data-sum="{{item.sum}}"
+    data-image="{{item.image}}"
+    bindtap="onPartItemTap"
+    hover-class="partItemHover" 
+  >
+    <image 
+      class="partItemImage" 
+      src="{{item.image ? item.image : '/images/add.png'}}"
+      mode="aspectFit"
+    />
+    <view class="text-container">
+      <view class="name">{{item.name}}</view>
+      <view class="rating">评分：{{item.rating}}</view>
+    </view>
+  </view>
+  <view class="bottom-button">
+    <button class="add-button" bindtap="onAddRatingObjectTap">添加评分对象</button>
+  </view>
+</view>

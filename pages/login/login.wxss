@@ -1,0 +1,78 @@
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.form-item{
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   display: flex;
+   align-items: center;
+   height: 80rpx;
+   padding-left: 20rpx;
+}
+.text{
+    flex: 2;
+}
+.input{
+    flex: 6;
+}
+
+/* 用户信息样式 */
+.top-box {
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #ff6a6a, #ffc371); /* 设置渐变背景 */
+}
+
+/* 用户头像样式 */
+.top-box .avatar {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 2px solid white;
+  box-shadow: 0 1px 5px black;
+}
+
+/* 用户昵称样式 */
+.top-box .nickname {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* 面板样式设置 */
+.panel {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.panel-list-item {
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+/* 箭头样式 */
+.panel-list-item image {
+  width: 60rpx;
+  height: 60rpx;
+}

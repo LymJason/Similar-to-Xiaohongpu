@@ -1,0 +1,57 @@
+.container {
+  padding: 20px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blog-image {
+  width: 100%; /* 图片宽度自适应 */
+  height: 200px; /* 固定高度 */
+  object-fit: cover; /* 保持图片比例 */
+  border-radius: 10px 10px 0 0;
+}
+
+.blog-content {
+  padding: 10px;
+}
+
+.blog-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.blog-describe {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.blog-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.delete-button {
+  width: 100%;
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}

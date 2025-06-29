@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="add">
+    <button type="primary" bindtap="goToAdd" style="position: relative; left: 0rpx; top: 0rpx; width: 235rpx; display: block; box-sizing: border-box">创建评分专区</button>
+  </view>
+
+<view class="title-container">
+  <text class="title">热门专区</text>
+</view>
+
+<scroll-view class="scroll-container" scroll-x="true" bindscroll="onScroll">
+  <block wx:for="{{popPartList}}" wx:key="_id">
+    <view class="poppart-item">
+      <button class="poppart-name" bindtap="onPartItemTap" data-id="{{item._id}}" data-name="{{item.name}}">{{item.name}}</button>
+      <image class="poppart-image" src="{{item.image}}"></image>
+      <!-- 显示每个 part 的 part_item 记录 -->
+      <view class="part-item-container">
+        <block wx:for="{{item.partItems}}" wx:key="index">
+          <view class="part-item">
+            <text class="part-item-name"bindtap='onPopPartTap'data-name="{{item.name}}" data-image="{{item.image}}"data-id="{{item._id}}">{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+<view class="part-list">
+    <text>全部分类</text>
+    <view class="part-item" wx:for="{{partList}}" wx:key="_id" data-id="{{item._id}}" data-name="{{item.name}}" bindtap="onPartItemTap">
+      <button class="part-button">{{item.name}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="blog-list">
+    <block wx:for="{{blogs}}" wx:key="_id">
+      <view class="blog-item" bindtap="goToDetail" data-describe="{{item.describe}}" data-id="{{item._id}}" data-name="{{item.name}}" data-image="{{item.image}}" data-_openid="{{item._openid}}">
+        <!-- 图片自适应 -->
+        <image src="{{item.image}}" mode="aspectFill" class="blog-image" />
+        <view class="blog-content">
+          <view class="blog-title">{{item.name}}</view>
+          <view class="blog-describe">{{item.describe}}</view>
+          <view class="blog-time">发布时间：{{item.createTime}}</view>
+        </view>
+        <!-- 删除按钮 -->
+        <button class="delete-button" catchtap="onDeleteBlog" data-id="{{item._id}}">删除</button>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="container">
+  <form bindsubmit="onFormSubmit">
+    <text>标题</text>
+    <input name="name" value="{{name}}" placeholder="输入标题" class="input-name" />
+    <text>描述</text>
+    <input name="describe" value="{{describe}}" placeholder="详细描述(非必填)" class="input-describe" />
+    <text>图片</text>
+    <button bindtap="chooseMedia">选择图片</button>
+    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="selected-image" />
+    <button type="primary" form-type="submit" class="submit-button">提交</button>
+  </form>
+</view>

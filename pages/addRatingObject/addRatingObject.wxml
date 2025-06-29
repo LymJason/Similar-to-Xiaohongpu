@@ -1,0 +1,10 @@
+<view class="container">
+  <form bindsubmit="onFormSubmit">
+    <text>名称</text>
+    <input name="name" placeholder="输入评分对象名称" class="input-name" value="{{ratingObjectName}}" />
+    <text>图片</text>
+    <button bindtap="chooseMedia">选择图片</button>
+    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="selected-image" />
+    <button type="primary" form-type="submit" class="submit-button">提交</button>
+  </form>
+</view>

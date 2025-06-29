@@ -1,0 +1,71 @@
+<view class="movie-container">
+  <view wx:if="{{image === 'cloud://lin-0gefnnv9220dd9dc.6c69-lin-0gefnnv9220dd9dc-1329002260/images/add-picture.png'}}">
+    <!-- 显示上传按钮 -->
+    <button class="upload-btn" bindtap="chooseMedia">上传图片</button>
+  </view>
+  <view wx:else>
+    <!-- 显示图片 -->
+    <image class="movie-image" src="{{image}}"mode="aspectFit"bindtap="onImageTap"></image>
+  </view>
+  <view class="movie-user">
+    <image class="movie-avatarUrl"src="{{avatarUrl}}"></image>
+    <text class="movie-nickName">{{nickName}}</text>
+  </view>
+  <view class="movie-info">
+    <text class="movie-name">{{name}}</text>
+    <text class="movie-describe">{{describe}}</text>
+  </view>
+</view>
+
+<!-- 输入栏和发送按钮 -->
+<view class="input-container" style="position: relative;">
+  <input
+    class="input-bar"
+    type="text"
+    placeholder="输入评论..."
+    bindinput="onInput"
+    value="{{inputValue}}"
+  />
+  <button class="send-btn" bindtap="onSend" size="mini">发送</button>
+</view>
+
+<view class="comments-container">
+  <block wx:for="{{comments}}" wx:key="_id">
+    <view class="comment-container">
+      <view class="cmt-container" >
+        <view class="avatar-nickname">
+          <image class="avatar" src="{{item.avatarUrl}}" mode="aspectFill"></image>
+          <text class="nickname">{{item.nickname}}</text>
+        </view>
+        <view class="comment-content">
+          <text bindtap="onCommentTap" data-id="{{item._id}}">{{item.content}}</text>
+          <view class="info-right">
+            <text class="time">{{item.createTime}}</text>
+            <image wx:if="{{item._openid===user_openid}}" class="delete-btn" src='/images/delete.png'bindtap='onDeleteComment' data-id="{{item._id}}"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 子评论列表 -->
+      <view class="replies-container">
+        <block wx:for="{{item.replies}}" wx:key="_id">
+          <view class="reply">
+            <view class="avatar-nickname">
+              <image class="avatar" src="{{item.avatarUrl}}" mode="aspectFill"></image>
+              <text class="nickname">{{item.nickname}}</text>
+            </view>
+            <view class="reply-content">
+              <text>{{item.content}}</text>
+              <view class="info-right">
+                <text class="time">{{item.createTime}}</text>
+                <image wx:if="{{item._openid===user_openid}}" class="delete-btn" src='/images/delete.png'bindtap='onDeleteReply' data-id="{{item._id}}"></image>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+
